@@ -58,7 +58,7 @@ def module_tests(module_lint_object, module):
             if all_tags_correct:
                 module.passed.append(("test_yml_tags", "tags adhere to guidelines", module.test_yml))
             else:
-                module.failed.append(("test_yml_tags", "tags do not adhere to guidelines", module.test_yml))
+                module.warned.append(("test_yml_tags", "tags do not adhere to guidelines", module.test_yml))
 
         module.passed.append(("test_yml_exists", "Test `test.yml` exists", module.test_yml))
     except FileNotFoundError:
